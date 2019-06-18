@@ -1,0 +1,84 @@
+.hero {
+  background: url(../img/Bitmap-bg-hero.png);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 80vh;
+
+  .logo {
+    position: absolute;
+    width: 150px;
+    left: 50%;
+    top: 100px;
+    margin-left: -75px; 
+  }
+
+  @include large-breakpoint {
+    height: 960px;
+
+    .logo {
+      top: 150px;
+      width: 250px;
+      margin-left: -125px; 
+    }
+  }
+
+  
+}
+.intro-text {
+  text-align: center;
+  h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+
+.about-us-hero {
+  background: url(../img/O-nama.png);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  h1 {
+    color: #ffffff;
+    height: 100px;
+  }
+
+  @include large-breakpoint {
+
+    h1 { 
+      height: 250px;
+    }
+
+  }
+  
+}
+
+.about-us-content {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+
+  img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: left;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  @include large-breakpoint {
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+
+    img {
+      width: 80%;
+      margin-bottom: 3rem;
+    }
+  }
+}
+

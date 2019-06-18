@@ -43,8 +43,10 @@
 }
 
 textarea {
+  font-family: $font-family;
   overflow: auto;
   height: auto;
+  resize: none;
 }
 
 fieldset {
