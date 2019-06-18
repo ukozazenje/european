@@ -8,7 +8,12 @@
 
   ul,
   li {
+    display: initial;
     list-style: none;
+    @media all and (max-width:500px){ 
+      display: none;
+    }
+
   }
   
   a {
@@ -74,4 +79,8 @@
     }
   }
 
+}
+
+.open {
+  display: initial !important;
 }
