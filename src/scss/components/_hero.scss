@@ -4,35 +4,82 @@
   background-position: center bottom;
   background-repeat: no-repeat;
   height: 80vh;
+  .slider {
+    // overflow: hidden;
+    // margin: 0 auto;
+    // font-size: 1.2em;
+    // background: #ffd7d1;
+    // padding-top: 4rem;
+    // text-align: center;
+    // position: relative;
+    // width: 9000px; /* Assign an insanely large width */
+    // top: 0;
+    // right: 0;
+    // animation: slide-animation 25s infinite;
 
-  .logo {
-    position: absolute;
-    width: 150px;
-    left: 50%;
-    top: 100px;
-    margin-left: -75px; 
+    // h2, img {
+    //   position: relative;
+    //   float: left;
+    //   box-sizing: border-box;
+    //   padding: 10px 20px;
+    //   animation: 10s slidy infinite; 
+    // }
+
   }
+  // .logo {
+  //   position: absolute;
+  //   width: 150px;
+  //   left: 50%;
+  //   top: 100px;
+  //   margin-left: -75px; 
+  // }
 
   @include large-breakpoint {
     height: 960px;
 
-    .logo {
-      top: 150px;
-      width: 250px;
-      margin-left: -125px; 
-    }
+    // .logo {
+    //   top: 150px;
+    //   width: 250px;
+    //   margin-left: -125px; 
+    // }
   }
 
   
 }
 .intro-text {
   text-align: center;
+  text-transform: uppercase;
+  .desktop-intro {
+    display: none;
+  }
+
   h2 {
     margin: 0;
     font-size: 1.2rem;
     font-weight: 400;
+
+    &.mobile-intro {
+      margin-bottom: 1.5rem;
+      line-height: 1.5; 
+    }
+  }
+
+  @include large-breakpoint {
+
+    .desktop-intro {
+      display: block;
+    }
+
+    h2 {
+      &.mobile-intro {
+        display: none
+      }
+    }
+    
+
   }
 }
+
 
 .about-us-hero {
   background: url(../img/O-nama.png);
@@ -82,3 +129,98 @@
   }
 }
 
+#slider,  #slider .slide{
+  padding-top: 3rem;
+  width: 350px;
+  height: 300px;
+  text-transform: uppercase;
+  .logo {
+    height: 150px;
+  }
+  
+  h2 {
+    font-size: 1.125rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgb(59, 59, 59);
+  }
+
+  @include medium-breakpoint {
+    width: 600px;
+  }
+
+  @include large-breakpoint {
+    width: 1000px;
+
+    .logo {
+      height: 200px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+  
+}
+#slider {
+  overflow: hidden;
+  margin: 0 auto;
+  font-size: 1.2em;
+  // background: #ffd7d1;
+}
+#slider .slider-container {
+  position: relative;
+  width: 9000px; /* Assign an insanely large width */
+  top: 0;
+  right: 0;
+  animation: slide-animation 15s infinite;
+}
+#slider .slide {
+  text-align: center;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+@keyframes slide-animation {
+  0% { 
+    opacity: 0;
+    right: 0;
+  }
+  18% {
+    opacity: 1;
+    right: 0; 
+  }
+  36% { right: 100%; }
+  54% { right: 100%; }
+  72% { right: 200%; }
+  90% { right: 200%; }
+
+  95% {
+    opacity: 1;
+    right: 200%; 
+  }
+  100% {
+    opacity: 0;
+    right: 200%;
+  }
+}
+
+.hide-desktop {
+  display: block;
+  @include large-breakpoint {
+    display: none;
+  }
+}
+
+.hide-mobile {
+  display: none;
+  @include large-breakpoint {
+    display: block;
+  }
+}
+
+.p-1 {
+  display: block;
+  padding-bottom: 1rem;
+}
