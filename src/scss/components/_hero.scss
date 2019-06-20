@@ -115,7 +115,7 @@
     text-align: left;
     font-size: 1.125rem;
     line-height: 1.5;
-    text-align: justify;
+    text-align: left;
   }
 
   @include large-breakpoint {
@@ -130,10 +130,10 @@
 }
 
 #slider,  #slider .slide{
-  padding-top: 3rem;
+  padding-top: 6rem;
   width: 350px;
   height: 400px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   .logo {
     height: 150px;
   }

@@ -29,6 +29,7 @@
     justify-content: flex-end;
     margin-bottom: 0;
     transition: all 350ms ease;
+    position: relative;
   }
   
   .navigation a {
@@ -58,7 +59,20 @@
   }
 }
 
+.logo-navigation {
+  position: absolute;
+  height: 44px;
+  top: 6px;
+  left: 16px;
 
+  @media all and (max-width:500px){
+    position: absolute;
+    left: initial;
+    height: 33px;
+    top: -37px;
+    right: 16px;
+  }
+}
 
 .menu-icon-wrapper {
   display: none;
